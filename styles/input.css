@@ -1,0 +1,248 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --color-primary: #009933;
+    /* Azul */
+    --color-secondary: #BE2B25;
+    /* Amarillo */
+    --color-accent: "";
+    /* Rojo */
+    --color-background: #f8fafc;
+
+    --color-grey: #E5E7EB;
+    /* Fondo claro */
+
+    --color-blue-light: #CFD6E1;
+    --color-blue-dark: #212934;
+
+
+
+     
+    --swiper-pagination-color: var(--swiper-theme-color);
+    --swiper-pagination-bullet-size: 8px;
+    --swiper-pagination-bullet-width: 8px;
+    --swiper-pagination-bullet-height: 8px;
+    --swiper-pagination-bullet-inactive-color: #000;
+    
+    --swiper-pagination-bullet-inactive-opacity: 0.2;
+    --swiper-pagination-bullet-opacity: 1;
+    --swiper-pagination-bullet-horizontal-gap: 4px;
+    --swiper-pagination-bullet-vertical-gap: 6px;
+       
+}
+
+
+
+@layer utilities {
+    .shadow-square {
+        box-shadow: var(--color-grey) 1.5vw 1.5vw;
+    }
+}
+
+@keyframes fadeInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(-10%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.fade-in-left {
+    animation: fadeInLeft 0.5s ease-in forwards;
+}
+
+
+@keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(10%);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+.fade-in-right {
+    animation: fadeInRight 0.5s ease-in forwards;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(10%) translateX(0);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0) translateX(0);
+    }
+}
+
+.fade-in-up {
+    animation: fadeInUp 0.5s ease-in;
+}
+
+
+.container-sm {
+    @apply px-5 max-w-full md:max-w-[560px] lg:max-w-[614px] xl:max-w-[768px] 2xl:max-w-[920px]
+}
+
+
+.container-md {
+    @apply px-5 max-w-full md:max-w-[536px] lg:max-w-[716px] xl:max-w-[896px] 2xl:max-w-[1076px]
+}
+
+.container-lg {
+    @apply px-5 max-w-full md:max-w-[614px] lg:max-w-[820px] xl:max-w-[1024px] 2xl:max-w-[1228px]
+}
+
+.container-xl {
+    @apply px-5 max-w-full md:max-w-[690px] lg:max-w-[920px] xl:max-w-[1152px] 2xl:max-w-[1382px]
+}
+
+
+.container-2xl {
+    @apply px-5 max-w-full md:max-w-[730px] lg:max-w-[972px] xl:max-w-[1216px] 2xl:max-w-[1460px]
+}
+
+
+.section {
+    @apply py-2 lg:py-8
+}
+
+.image-text-aside {
+    @apply grid grid-cols-1 lg:grid-cols-2 gap-8 md:gap-10 lg:gap-16
+}
+
+.image-text-aside img {
+    @apply w-[95%] md:w-full mx-auto
+}
+
+.font-color-primary {
+    color: var(--color-primary);
+}
+
+.font-color-secondary {
+    color: var(--color-secondary);
+}
+
+.font-color-tertiary {
+    @apply text-gray-700
+}
+
+.font-color-tertiary-light {
+    @apply text-[var(--color-blue-light)]
+}
+
+.btn-primary {
+    @apply px-4 py-2 rounded-md border border-[var(--color-secondary)] bg-[var(--color-secondary)] text-white text-sm hover:shadow-md transition duration-200
+}
+
+h1 {
+    @apply text-4xl lg:text-5xl
+}
+
+h2 {
+    @apply text-3xl lg:text-3xl mb-2
+}
+
+h3 {
+    @apply text-2xl lg:text-xl mb-2
+}
+
+p {
+    @apply text-lg md:text-lg xl:text-2xl leading-6 md:leading-8
+}
+
+/* p2 {
+    @apply 
+} */
+ 
+
+/* * {
+    font-family: 'Archivo Narrow', sans-serif;
+} */
+
+body {
+    @apply font-primary;
+}
+
+.font-primary {
+    font-family: 'Archivo Narrow', sans-serif;
+}
+
+.font-secondary {
+    font-family: "Caveat", sans-serif !important;
+}
+
+
+
+.nav-link {
+    @apply text-lg xl:text-2xl font-medium hover:text-[var(--color-primary)] cursor-pointer
+}
+
+.menu-hidden {
+    max-height: 0px;
+}
+
+.menu-visible {
+    max-height: 300px;
+}
+
+
+.leading-title {
+    @apply my-8 md:my-12 xl:mb-14 font-color-primary font-bold text-center
+}
+
+
+.productos__grid__item {
+    @apply shadow-md
+}
+
+.productos__grid__item__carousel {
+    @apply relative w-full aspect-[16/9]
+}
+
+.productos__grid__item__carousel__img {
+    @apply absolute inset-0 w-full h-full object-cover transition-opacity duration-500 ease-in-out flex justify-center items-center opacity-0;
+
+}
+
+.productos__grid__item__carousel__img__active {
+    @apply opacity-100;
+
+}
+
+
+.productos__grid__item__detail {
+    @apply p-5 space-y-1 overflow-hidden
+}
+
+.productos__grid__item__detail h3, .productos__grid__item__detail h4 {
+    @apply font-color-primary hover:underline
+}
+
+.productos__grid__item__detail h4 {
+    @apply ml-2
+}
+
+
+
+.productos__grid__item__divider {
+
+
+
+}
+
+
+.text-underline-primary {
+    @apply font-color-primary hover:underline;
+}
